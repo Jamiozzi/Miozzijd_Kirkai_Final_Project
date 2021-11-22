@@ -1,4 +1,5 @@
 var player;
+var ball;
 
 function setup(){
   createCanvas(1000, 425);
@@ -28,7 +29,7 @@ function checkMoving(){
   if(keyIsDown(68)){
     player.goRight();
   }
-  else{
+  else {
     player.drift();
   }
 }

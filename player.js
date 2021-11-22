@@ -13,13 +13,13 @@ function Player(){
   this.show = function(){
     fill(255, 0, 0);
     rect(this.x, this.y, 40, 40);
+  }
 
   //function for key-presses
-  }
   this.goDown = function(){
-    if (speedY < 5){
-      speedY += 1;
+    if (speedY < 5 & speedY > 0){
       this.y += speedY;
+      ball.y += speedY;
     } else {
       speedY = 5;
       this.y += speedY;
@@ -28,7 +28,7 @@ function Player(){
   
   
   this.goUp = function(){
-    if (speedY > -5){
+    if (speedY > -5 & speedY < 0){
       speedY -= 1;
       this.y += speedY;
     } else {
@@ -39,7 +39,7 @@ function Player(){
   
   
   this.goLeft = function(){
-    if (speedX > -5){
+    if (speedX > -5 & speedX < 0){
       speedX -= 1;
       this.x += speedX;
     } else {
@@ -50,7 +50,7 @@ function Player(){
   
   
   this.goRight = function(){
-    if (speedX < 5){
+    if (speedX < 5 & speedX > 0){
       speedX += 1;
       this.x += speedX;
     } else {
