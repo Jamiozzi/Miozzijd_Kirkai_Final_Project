@@ -4,12 +4,19 @@ var ball;
 function setup(){
   createCanvas(1000, 425);
   player = new Player();
+  ball = new Ball();
 }
 
 function draw(){ 
   background(0,200,0);
   checkMoving();
   player.show();
+  ball.show();
+  hit = collideRectCircle(player.getPlayerX(), player.getPlayerY(), player.getPlayerW(), player.getPlayerH(), ball.getBallX(), ball.getBallY(), ball.getBallR());
+  if (hit){
+    collide();
+  }
+  print(hit);
 }
 
 function checkMoving(){
@@ -33,3 +40,10 @@ function checkMoving(){
     player.drift();
   }
 }
+
+function collide(){
+    ball.setBallSpeedX(player.getPlayerSpeedX());
+    ball.setBallSpeedY(player.getPlayerSpeedY());
+  }
+
+
