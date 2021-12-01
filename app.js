@@ -48,7 +48,7 @@ function draw() {
   ball5.show();
   ball6.show();
   ball7.show();
-  fill(255, 0, 100);
+  fill(255, 255, 255);
   textSize(24);
   text(`${round(millis()/1000)} seconds have gone by!`, width/2.8, height/10);
 
@@ -156,40 +156,43 @@ function ball1Check() {
   if (ball1Touched > 0) {
     ball1.remove();
   }
+  else{
+    false;
+  }
 }
 function ball2Check() {
   ball2Touched++
-  if (ball2Touched > 0) {
+  if ((ball1Touched > 0) && (ball2Touched > 0)) {
     ball2.remove();
   }
 }
 function ball3Check() {
   ball3Touched++
-  if (ball3Touched > 0) {
+  if ((ball1Touched > 0) && (ball2Touched > 0) && (ball3Touched > 0)) {
     ball3.remove();
   }
 }
 function ball4Check() {
   ball4Touched++
-  if (ball4Touched > 0) {
+  if ((ball1Touched > 0) && (ball2Touched > 0) && (ball3Touched > 0) && (ball4Touched > 0)) {
     ball4.remove();
   }
 }
 function ball5Check() {
   ball5Touched++
-  if (ball5Touched > 0) {
+  if ((ball1Touched > 0) && (ball2Touched > 0) && (ball3Touched > 0) && (ball4Touched > 0) && (ball5Touched > 0)) {
     ball5.remove();
   }
 }
 function ball6Check() {
   ball6Touched++
-  if (ball6Touched > 0) {
+  if ((ball1Touched > 0) && (ball2Touched > 0) && (ball3Touched > 0) && (ball4Touched > 0) && (ball5Touched > 0) && (ball6Touched > 0)) {
     ball6.remove();
   }
 }
 function ball7Check() {
   ball7Touched++
-  if (ball7Touched > 0) {
+  if ((ball1Touched > 0) && (ball2Touched > 0) && (ball3Touched > 0) && (ball4Touched > 0) && (ball5Touched > 0) && (ball6Touched > 0) &&(ball7Touched > 0)) {
     ball7.remove();
   }
 }
