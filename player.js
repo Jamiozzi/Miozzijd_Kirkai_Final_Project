@@ -40,7 +40,6 @@ function Player(){
   this.goDown = function(){
     if (speedY < 5 & speedY > 0){
       this.y += speedY;
-      ball.y += speedY;
     } else {
       speedY = 5;
       this.y += speedY;

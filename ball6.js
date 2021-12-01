@@ -1,13 +1,14 @@
-function Ball(){
-  this.cx = 200;
-  this.cy = 200;
+function Ball6(){
+  this.cx = random(10,990);
+  this.cy = random(10,415);
   this.cr = 40;
   var speedX = 0;
   var speedY = 0;
-
+  var touched = true;
   //draws the square player
   this.show = function(){
-    fill(255, 0, 0);
+    if (touched)
+    fill(color('purple'));
     circle(this.cx, this.cy, this.cr);
   }
 
@@ -31,6 +32,9 @@ function Ball(){
   }
   this.setBallSpeedY = function(SpeedY){
     SpeedY = this.speedY;
+  }
+  this.changeBallColor = function(){
+    this.fill(0,255,0);
   }
 
 }
