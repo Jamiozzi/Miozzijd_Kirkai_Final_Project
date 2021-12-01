@@ -48,6 +48,9 @@ function draw() {
   ball5.show();
   ball6.show();
   ball7.show();
+  fill(255, 0, 100);
+  textSize(24);
+  text(`${round(millis()/1000)} seconds have gone by!`, width/2.8, height/10);
 
   hit1 = collideRectCircle(
     player.getPlayerX(),
