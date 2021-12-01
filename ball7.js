@@ -11,6 +11,10 @@ function Ball7(){
     fill(color('black'));
     circle(this.cx, this.cy, this.cr);
   }
+  this.remove = function(){
+    this.cx = 999;
+    this.cy = 999;
+  }
 
   this.getBallX = function(){
     return this.cx;

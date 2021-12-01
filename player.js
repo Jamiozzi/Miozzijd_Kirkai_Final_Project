@@ -6,10 +6,6 @@ function Player(){
   var speedX = 0;
   var speedY = 0;
 
-  //scoreboard
-  function updateScoreTallyUI(){
-    scoreParagraph.innerText = 'Player 1: ' + game.score.user1 + ' v Player 2: ' + game.score.user2;
-  }
 
   //draws the square player
   this.show = function(){
