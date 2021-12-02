@@ -202,7 +202,3 @@ function checkMoving() {
     player.drift();
   }
 }
-
-function collide() {
-  ball.changeBallColor();
-}
