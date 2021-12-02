@@ -1,7 +1,3 @@
-var scoreParagraph = document.getElementById("score");
-var gameScore = 0;
-var userName = "Challenger";
-
 var player;
 var ball1;
 var ball2;
@@ -18,12 +14,7 @@ var ball4Touched = 0;
 var ball5Touched = 0;
 var ball6Touched = 0;
 var ball7Touched = 0;
-//scoreboard
-function updateScore() {
-  gameScore++;
-  print(gameScore);
-  scoreParagraph = "Challenger Score: " + gameScore.toString();
-}
+
 
 function setup() {
   createCanvas(1000, 425);
@@ -62,7 +53,6 @@ function draw() {
     ball1.getBallR()
   );
   if (hit1) {
-    updateScore();
     ball1Check();
   }
   hit2 = collideRectCircle(
@@ -75,7 +65,6 @@ function draw() {
     ball2.getBallR()
   );
   if (hit2) {
-    updateScore();
     ball2Check();
   }
   
@@ -89,7 +78,6 @@ function draw() {
     ball3.getBallR()
   );
   if (hit3) {
-    updateScore();
     ball3Check();
   }
   
@@ -103,7 +91,6 @@ function draw() {
     ball4.getBallR()
   );
   if (hit4) {
-    updateScore();
     ball4Check();
   }
   
@@ -117,7 +104,6 @@ function draw() {
     ball5.getBallR()
   );
   if (hit5) {
-    updateScore();
     ball5Check();
   }
   
@@ -131,7 +117,6 @@ function draw() {
     ball6.getBallR()
   );
   if (hit6) {
-    updateScore();
     ball6Check();
   }
   
@@ -145,7 +130,6 @@ function draw() {
     ball7.getBallR()
   );
   if (hit7) {
-    updateScore();
     ball7Check();
 
   }
