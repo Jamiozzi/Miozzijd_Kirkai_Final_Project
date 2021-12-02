@@ -50,7 +50,7 @@ function draw() {
   ball7.show();
   fill(255, 255, 255);
   textSize(24);
-  text(`${round(millis()/1000)} seconds have gone by!`, width/2.8, height/10);
+  text(`${(millis()/1000).toFixed(2)} seconds have gone by!`, width/2.8, height/10);
 
   hit1 = collideRectCircle(
     player.getPlayerX(),
@@ -194,6 +194,7 @@ function ball7Check() {
   ball7Touched++
   if ((ball1Touched > 0) && (ball2Touched > 0) && (ball3Touched > 0) && (ball4Touched > 0) && (ball5Touched > 0) && (ball6Touched > 0) &&(ball7Touched > 0)) {
     ball7.remove();
+    millis.stop();
   }
 }
 
